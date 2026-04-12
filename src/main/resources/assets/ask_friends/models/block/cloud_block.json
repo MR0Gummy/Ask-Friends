@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ask_friends:block/cloud_block_akiera"
+  }
+}

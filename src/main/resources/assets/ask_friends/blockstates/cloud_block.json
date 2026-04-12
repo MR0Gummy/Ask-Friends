@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ask_friends:block/cloud_block"
+    }
+  }
+}

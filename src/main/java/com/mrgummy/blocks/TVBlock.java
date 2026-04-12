@@ -8,8 +8,7 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Property;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -19,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class TVBlock extends SuggestedBlock{
     public static final BooleanProperty LIT;
-    public static final DirectionProperty FACING;
+    public static final EnumProperty<Direction> FACING;
 
     public TVBlock(Settings settings) {
         super(settings);
@@ -32,7 +31,7 @@ public class TVBlock extends SuggestedBlock{
     }
 
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
-        if (!world.isClient) {
+        if (!world.isClient()) {
             boolean bl = (Boolean)state.get(LIT);
             if (bl != world.isReceivingRedstonePower(pos)) {
                 if (bl) {
@@ -55,8 +54,8 @@ public class TVBlock extends SuggestedBlock{
         return (BlockState)state.with(FACING, rotation.rotate((Direction)state.get(FACING)));
     }
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{LIT});
-        builder.add(new Property[]{FACING});
+        builder.add(LIT);
+        builder.add(FACING);
     }
 
 

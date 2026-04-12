@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ask_friends:block/block_of_cheese_tari"
+      "model": "ask_friends:block/block_of_cheese"
     }
   }
 }

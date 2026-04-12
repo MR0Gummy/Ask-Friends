@@ -8,10 +8,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final ItemGroup ASK_FRIENDS_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(AskFriends.MOD_ID, "ask_friends_group"),
+    public static final ItemGroup ASK_FRIENDS_GROUP = Registry.register(Registries.ITEM_GROUP, AskFriends.of("ask_friends"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("itemgroup.ask_friends"))
                     .icon(() -> new ItemStack(ModItems.BUTTERFLY)).entries((displayParameters, itemStackCollector) -> {
@@ -37,6 +36,7 @@ public class ModItemGroups {
                         itemStackCollector.add(new ItemStack(ModBlocks.BLOCK_OF_SALT));
                         itemStackCollector.add(new ItemStack(ModBlocks.CONCRETE));
                         itemStackCollector.add(new ItemStack(ModBlocks.OPALIZED_WOOD));
+                        itemStackCollector.add(new ItemStack(ModBlocks.CLOUD_BLOCK));
 
                         itemStackCollector.add(new ItemStack(ModItems.BANDANA));
                         itemStackCollector.add(new ItemStack(ModItems.BUTTER));
@@ -51,7 +51,7 @@ public class ModItemGroups {
                     }).build());
 
 
-    public static void registerItemGroup() {
+    public static void init() {
     }
 
 }

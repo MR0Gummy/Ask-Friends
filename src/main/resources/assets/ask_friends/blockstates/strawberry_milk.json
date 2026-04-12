@@ -1,19 +1,19 @@
 {
   "variants": {
     "facing=north": {
-      "model": "ask_friends:block/strawberry_milk_zeni",
+      "model": "ask_friends:block/strawberry_milk",
       "y": 90
     },
     "facing=south": {
-      "model": "ask_friends:block/strawberry_milk_zeni",
+      "model": "ask_friends:block/strawberry_milk",
       "y": 270
     },
     "facing=east": {
-      "model": "ask_friends:block/strawberry_milk_zeni",
+      "model": "ask_friends:block/strawberry_milk",
       "y": 180
     },
     "facing=west": {
-      "model": "ask_friends:block/strawberry_milk_zeni"
+      "model": "ask_friends:block/strawberry_milk"
     }
   }
 }

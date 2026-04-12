@@ -1,35 +1,35 @@
 {
     "variants": {
         "facing=east,lit=true":{
-            "model": "ask_friends:block/tv_block_moon",
+            "model": "ask_friends:block/tv_block",
             "y": 180
         },
         "facing=east,lit=false":{
-            "model": "ask_friends:block/tv_block_off_moon",
+            "model": "ask_friends:block/tv_block_off",
             "y": 180
         },
         "facing=north,lit=true":{
-            "model": "ask_friends:block/tv_block_moon",
+            "model": "ask_friends:block/tv_block",
             "y": 90
         },
         "facing=north,lit=false":{
-            "model": "ask_friends:block/tv_block_off_moon",
+            "model": "ask_friends:block/tv_block_off",
             "y": 90
         },
         "facing=south,lit=true":{
-            "model": "ask_friends:block/tv_block_moon",
+            "model": "ask_friends:block/tv_block",
             "y": 270
         },
         "facing=south,lit=false":{
-            "model": "ask_friends:block/tv_block_off_moon",
+            "model": "ask_friends:block/tv_block_off",
             "y": 270
         },
         "facing=west,lit=true":{
-            "model": "ask_friends:block/tv_block_moon",
+            "model": "ask_friends:block/tv_block",
             "y": 360
         },
         "facing=west,lit=false":{
-            "model": "ask_friends:block/tv_block_off_moon",
+            "model": "ask_friends:block/tv_block_off",
             "y": 360
         }
     }

@@ -8,9 +8,6 @@
     "defaultRequire": 1
   },
   "client": [
-    "EntityRendererMixin",
-    "ItemRendererAccessor",
-    "ItemRendererMixin",
-    "ModelLoaderMixin"
+    "EntityRendererMixin"
   ]
 }

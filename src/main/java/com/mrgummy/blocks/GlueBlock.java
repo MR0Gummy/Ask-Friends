@@ -6,7 +6,7 @@ import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
@@ -18,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 public class GlueBlock extends SuggestedBlock{
     private static final VoxelShape BASE_SHAPE_X;
     private static final VoxelShape BASE_SHAPE_Z;
-    public static final DirectionProperty FACING;
+    public static final EnumProperty<Direction> FACING;
 
     public GlueBlock(Settings settings) {
         super(settings);

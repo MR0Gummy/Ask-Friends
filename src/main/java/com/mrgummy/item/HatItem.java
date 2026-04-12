@@ -1,32 +1,24 @@
 package com.mrgummy.item;
 
 
-import net.minecraft.client.item.TooltipContext;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.LoreComponent;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Equipment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 
-public class HatItem extends SuggestedItem implements Equipment {
+public class HatItem extends SuggestedItem {
 
 
     public HatItem(Settings settings) {
-        super(settings);
-    }
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.ask_friends.hat"));
-
-        super.appendTooltip(stack, world, tooltip, context);
+        super(settings.equippable(EquipmentSlot.HEAD).component(DataComponentTypes.LORE, new LoreComponent(List.of(Text.translatable("item.ask_friends.hat")))));
     }
 
     public static boolean isWearingHat(LivingEntity livingEntity) {
@@ -42,12 +34,6 @@ public class HatItem extends SuggestedItem implements Equipment {
             return component.getDefaultStack();
         }
         return ItemStack.EMPTY;
-    }
-
-
-    @Override
-    public EquipmentSlot getSlotType() {
-        return EquipmentSlot.HEAD;
     }
 }
 

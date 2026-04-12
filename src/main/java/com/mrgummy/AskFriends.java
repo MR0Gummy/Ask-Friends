@@ -5,6 +5,7 @@ import com.mrgummy.item.ModItemGroups;
 import com.mrgummy.item.ModItems;
 import com.mrgummy.misc.ModCustomTrades;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +15,7 @@ public class AskFriends implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger("ask_friends");
 	public static String MOD_ID = "ask_friends";
+	public static Identifier of(String id) {return Identifier.of(MOD_ID, id);}
 
 	@Override
 	public void onInitialize() {
@@ -24,9 +26,9 @@ public class AskFriends implements ModInitializer {
 
 
 		LOGGER.info("Maybe ask your friends for some prompts it's fun to make such things and their reaction was so fun!(Initializing Ask Friends Main)");
-		ModBlocks.regiterModBlock();
-		ModItems.registerModItem();
-		ModItemGroups.registerItemGroup();
-		ModCustomTrades.registerCustomTrades();
+		ModBlocks.init();
+		ModItems.init();
+		ModItemGroups.init();
+		ModCustomTrades.init();
 	}
 }

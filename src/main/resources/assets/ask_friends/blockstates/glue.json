@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "ask_friends:block/glue_dallie",
+      "model": "ask_friends:block/glue",
       "y": 90
     },
     "facing=south": {
-      "model": "ask_friends:block/glue_dallie",
+      "model": "ask_friends:block/glue",
       "y": 90
     },
     "facing=east": {
-      "model": "ask_friends:block/glue_dallie"
+      "model": "ask_friends:block/glue"
     },
     "facing=west": {
-      "model": "ask_friends:block/glue_dallie"
+      "model": "ask_friends:block/glue"
     }
   }
 }

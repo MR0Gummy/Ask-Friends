@@ -1,7 +1,6 @@
 package com.mrgummy.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.BlockView;
@@ -14,9 +13,5 @@ public class SuggestedBlock extends Block {
         super(settings);
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(Text.translatable("block.ask_friends." + stack.getItem() + ".tooltip"));
-        super.appendTooltip(stack, world, tooltip, options);
-    }
+
 }

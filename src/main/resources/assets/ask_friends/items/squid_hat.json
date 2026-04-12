@@ -1,0 +1,21 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "cases": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "ask_friends:item/squid_hat_worn"
+        },
+        "when": [
+          "head"
+        ]
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "ask_friends:item/squid_hat"
+    },
+    "property": "minecraft:display_context"
+  }
+}
